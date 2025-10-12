@@ -1,0 +1,93 @@
+#cancer{
+    background-color: lightgreen;
+    font-size:60px;
+    font-family: monospace;
+    color: red;
+    text-align:center;
+    padding: 20px;
+    font-weight:bolder;
+}
+
+.center{
+    text-align:center;
+    padding: 10px;
+    font-family: 'Times New Roman';
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+#emphasis{
+font-size: 20px;
+color: rgb(148, 135, 222);
+padding: auto;
+font-weight: bolder;
+}
+
+#contact{
+  font-size: smaller;
+  font-weight: bolder;
+}
+
+hr {
+  width: 70%;
+  margin: 20px auto;
+  height: 4px;
+  background-color: #4CAF50;
+  border: none;
+}
+
+body {
+  background: linear-gradient(to right, lightgreen,lightblue, white);
+}
+
+#left{
+  text-align: left;
+  vertical-align: top;
+  font-size: 20px;
+}
+
+form {
+  background-color: rgba(255, 255, 255, 0.559);
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  margin: 10px auto;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 90%;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor:pointer;
+}
+
+a:link {
+  color: rgb(0, 145, 255);
+  text-decoration: none;
+}
+
+a:visited {
+  color: red;
+}
+
+a:hover {
+  color:none;
+  text-decoration: underline;
+}
+
+a:active {
+  color: orange;
+}
