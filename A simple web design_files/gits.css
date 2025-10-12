@@ -1,0 +1,66 @@
+form {
+  background-color: rgba(255, 255, 255, 0.559);
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px;
+  margin: 10px auto;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 90%;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"]{
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor:pointer;
+}
+.center{
+    text-align: center;
+    font-weight: bolder;
+    font-family: monospace;
+    font-size: x-large;
+}
+body{
+    background:linear-gradient(to right, green, lightblue, tomato);
+}
+
+textarea{
+    width: 450px;
+    background: lightcyan;
+    border-radius: 8px;
+}
+
+button{
+    text-align: center;
+}
+footer{
+  color:#ccc;
+}
+th, td,table{
+border-collapse: collapse;
+padding: 10px;
+text-align: left;
+border: 1px solid black;
+}
+table{
+  width: 80%;
+  margin: 20px auto;
+}
+#m{
+  text-align: center;
+  font-weight: bolder;
+}
+th{
+  text-align: center;
+}
