@@ -12,13 +12,18 @@
 
   <!-- HEADER -->
   <header>
-    <div class="menu-toggle">☰</div>
-    <h1>TimoTECH Films</h1>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#packages">Packages</a></li>
+    <h1>TimoTECH <span>Films</span></h1>
+
+  <!-- Mobile menu toggle -->
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+
+  <nav id="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#packages">Packages</a></li>
         <li><a href="#pa">PA System</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -120,9 +125,12 @@
     <p>© 2025 TimoTECH Films | Designed by MutsTECH</p>
   </footer>
 <script>
-  const toggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('nav');
-  toggle.addEventListener('click', () => nav.classList.toggle('active'));
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.querySelector('nav ul');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
 </script>
 </body>
 </html>
