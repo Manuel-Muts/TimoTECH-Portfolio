@@ -9,7 +9,6 @@ body {
   color: #333;
   background-color: #f8f8f8;
 }
-
 /* ---------- HEADER (Desktop) ---------- */
 header {
   background: #000;
@@ -47,35 +46,44 @@ nav a:hover {
   color: #ff7b00;
 }
 
-/* ---------- MOBILE VIEW ---------- */
+/* ---------- MOBILE STYLES ---------- */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Hide nav by default on mobile */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 20px;
+  .menu-toggle {
+    display: block;
   }
 
-  header h1 {
-    margin-bottom: 10px;
-    font-size: 20px;
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  nav.active {
+    display: block;
   }
 
   nav ul {
     flex-direction: column;
-    gap: 10px;
+    background: #000;
     width: 100%;
-    background-color: #000;
     padding: 10px 0;
   }
 
   nav ul li {
-    width: 100%;
+    text-align: left;
+    padding: 8px 20px;
   }
 
   nav a {
     display: block;
     width: 100%;
-    padding: 8px 15px;
   }
 }
 
@@ -84,16 +92,18 @@ nav a:hover {
   background-image: url('images/gg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center top; /* focus on upper part (faces) */
+  background-position: top center;
   width: 100%;
   min-height: 100vh;
+  margin-top: 80px; /* so header doesn't overlap */
 }
 
+/* Mobile tweak */
 @media (max-width: 768px) {
   .hero {
-    background-size: contain;  /* show full image on small screens */
+    background-size: contain;   /* show full image */
+    background-color: #000;     /* fills any gaps */
     background-position: top center;
-    background-color: #000;    /* fills background where image ends */
   }
 }
 
