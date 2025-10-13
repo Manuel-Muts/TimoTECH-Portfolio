@@ -47,23 +47,18 @@ nav a:hover {
 .hero {
   background-image: url('images/gg.jpg');
   background-repeat: no-repeat;
-  background-size: cover;       /* Makes image fill entire section */
-  background-position: center;  /* Keeps the subject centered */
-  background-attachment: scroll;/* Fix mobile scrolling issue */
+  background-size: cover;
+  background-position: center;
   width: 100%;
-  min-height: 100vh;            /* Full screen height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
+  min-height: 100vh;
 }
 @media (max-width: 768px) {
   .hero {
-    min-height: 70vh; /* slightly smaller on phones */
-    background-position: top; /* focus top area if needed */
+    background-size: contain;  /* show full image on phones */
+    background-position: top;
   }
 }
+
 .hero-content {
   background: rgba(0, 0, 0, 0.5); /* semi-transparent background for readability */
   padding: 20px;
