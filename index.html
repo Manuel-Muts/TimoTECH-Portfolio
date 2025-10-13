@@ -12,6 +12,7 @@
 
   <!-- HEADER -->
   <header>
+    <div class="menu-toggle">☰</div>
     <h1>TimoTECH Films</h1>
     <nav>
       <ul>
@@ -118,6 +119,10 @@
   <footer>
     <p>© 2025 TimoTECH Films | Designed by MutsTECH</p>
   </footer>
-
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav');
+  toggle.addEventListener('click', () => nav.classList.toggle('active'));
+</script>
 </body>
 </html>
