@@ -25,14 +25,3 @@ document.addEventListener('DOMContentLoaded', function () {
   setInterval(nextSlide, 3000); // Change slide every 3 seconds
   showSlide(currentIndex);
 });
-
-  window.addEventListener('scroll', () => {
-    const pa = document.getElementById('pa');
-    if (window.scrollY > 50) {
-      pa.style.background = 'rgba(255, 69, 0, 0.8)';
-    } else {
-      pa.style.background = 'rgba(0, 0, 0, 0.7)';
-    }
-  });
-
-  const toggle = document.querySelector('.menu-toggle');
