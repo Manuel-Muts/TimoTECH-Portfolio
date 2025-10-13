@@ -53,8 +53,20 @@ nav a:hover {
 /* Mobile Menu */
 .menu-toggle {
   display: none;
-  font-size: 28px;
+  font-size: 30px;
   cursor: pointer;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    color: #fff;
+  }
+
+  nav ul {
+    transition: all 0.3s ease-in-out;
+  }
 }
 
 /* Hide nav on mobile initially */
@@ -65,20 +77,20 @@ nav a:hover {
     background: #000;
     position: absolute;
     top: 60px;
-    right: 0;
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
-  }
+  right: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+}
 
-  nav ul.active {
-    display: flex;
-  }
+nav ul.active {
+  display: flex;
+}
 
   .menu-toggle {
     display: block;
   }
-}
 
 /* HERO SECTION */
 .hero {
