@@ -45,20 +45,32 @@ nav a:hover {
 
 /* HERO SECTION */
 .hero {
-  background: url('images/gg.jpg') center/cover no-repeat;
-  height: 100vh;
+  background-image: url('images/gg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;       /* Makes image fill entire section */
+  background-position: center;  /* Keeps the subject centered */
+  background-attachment: scroll;/* Fix mobile scrolling issue */
+  width: 100%;
+  min-height: 100vh;            /* Full screen height */
   display: flex;
-  justify-content: center;
   align-items: center;
-  color: white;
+  justify-content: center;
   text-align: center;
-  padding: 0 20px;
+  color: white;
+}
+@media (max-width: 768px) {
+  .hero {
+    min-height: 70vh; /* slightly smaller on phones */
+    background-position: top; /* focus top area if needed */
+  }
+}
+.hero-content {
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent background for readability */
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 2.5rem
 }
 
-.hero-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
 
 .btn {
   display: inline-block;
