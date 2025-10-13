@@ -1,3 +1,4 @@
+/* RESET & BASE STYLES */
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +10,8 @@ body {
   color: #333;
   background-color: #f8f8f8;
 }
+
+/* HEADER */
 header {
   background: #000;
   color: #fff;
@@ -33,7 +36,7 @@ header h1 span {
   font-weight: normal;
 }
 
-/* Navigation Links */
+/* NAVIGATION LINKS */
 nav ul {
   list-style: none;
   display: flex;
@@ -50,47 +53,44 @@ nav a:hover {
   color: #ff7b00;
 }
 
-/* Mobile Menu */
+/* MOBILE MENU BUTTON */
 .menu-toggle {
   display: none;
   font-size: 30px;
   cursor: pointer;
   user-select: none;
+  color: #fff;
 }
 
+/* MOBILE STYLES */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
-    color: #fff;
   }
 
   nav ul {
-    transition: all 0.3s ease-in-out;
-  }
-}
-
-/* Hide nav on mobile initially */
-@media (max-width: 768px) {
-  nav ul {
-    display: none;
     flex-direction: column;
     background: #000;
     position: absolute;
     top: 60px;
-  right: 0;
-  width: 100%;
-  text-align: center;
-  padding: 20px 0;
-}
-}
-
-nav ul.active {
-  display: flex;
-}
-
-  .menu-toggle {
-    display: block;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    max-height: 0; /* hidden by default */
+    transition: max-height 0.4s ease-in-out;
+    padding: 0;
   }
+
+  nav ul.active {
+    max-height: 300px; /* show menu smoothly */
+    padding: 20px 0;
+  }
+
+  nav ul li {
+    padding: 10px 0;
+  }
+}
 
 /* HERO SECTION */
 .hero {
@@ -98,9 +98,9 @@ nav ul.active {
   width: 100%;
   height: 100vh;
   background: url("images/gg.jpg") center center no-repeat;
-  background-size: contain; /* Ensures image fits within the viewport */
-  background-color: #000; /* fallback color */
-  background-attachment: scroll; /* prevents weird zoom behavior on mobile */
+  background-size: contain;
+  background-color: #000;
+  background-attachment: scroll;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,18 +111,17 @@ nav ul.active {
 
 @media (min-width: 768px) {
   .hero {
-    background-size: cover; /* On larger screens, fill nicely */
+    background-size: cover;
     background-position: center;
   }
 }
 
 .hero-content {
-  background: rgba(0, 0, 0, 0.5); /* semi-transparent background for readability */
+  background: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 10px;
-  font-size: 2.5rem
+  font-size: 2.5rem;
 }
-
 
 .btn {
   display: inline-block;
@@ -139,7 +138,7 @@ nav ul.active {
   background: #e06c00;
 }
 
-/* PORTFOLIO */
+/* PORTFOLIO SECTION */
 #portfolio {
   padding: 80px 20px;
   text-align: center;
@@ -162,7 +161,7 @@ nav ul.active {
   transform: scale(1.05);
 }
 
-/* PACKAGES */
+/* PACKAGES SECTION */
 #packages {
   background: #fff;
   padding: 80px 20px;
@@ -181,7 +180,7 @@ nav ul.active {
   border-radius: 10px;
   padding: 20px;
   width: 300px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .package-card h3 {
@@ -193,20 +192,31 @@ nav ul.active {
   margin: 15px 0;
 }
 
-/* PA SYSTEM */
+/* PA SYSTEM SECTION */
 #pa {
-  background: #000;
-  color: #fff;
   padding: 80px 20px;
   text-align: center;
 }
+#pa {
+  background: rgba(0, 0, 0, 0.7); /* black with 70% opacity */
+  color: #fff;
+  transition: background 1s ease-in-out; /* smooth fading transition */
+}
+#pa:hover {
+  background: rgba(50, 69, 0, 0.8); /* fades to orange tone */
+}
+#pa h2 {
+  color: #ff7b00;
+  margin-bottom: 20px;
+}
 
-/* CONTACT */
+/* CONTACT SECTION */
 #contact {
   padding: 60px 20px;
   text-align: center;
 }
 
+/* FOOTER */
 footer {
   background: #000;
   color: white;
@@ -229,7 +239,7 @@ footer {
 
 .slides {
   display: flex;
-  transition: transform 0.7s cubic-bezier(.77,0,.18,1);
+  transition: transform 0.7s cubic-bezier(.77, 0, .18, 1);
   height: 100%;
 }
 
@@ -253,3 +263,24 @@ footer {
   85% { transform: translateX(-400%); }
   100% { transform: translateX(-400%); }
 }
+/* TOGGLE ICON ANIMATION */
+.menu-toggle {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.menu-toggle.active {
+  transform: rotate(90deg);
+  color: #ff7b00; /* optional highlight when open */
+}
+
+/* Optional: turn the "☰" into an "X" smoothly */
+.menu-toggle::before {
+  content: "☰";
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.active::before {
+  content: "✕"; /* X symbol when active */
+}
+

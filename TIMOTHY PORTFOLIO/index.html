@@ -12,12 +12,18 @@
 
   <!-- HEADER -->
   <header>
-    <h1>TimoTECH Films</h1>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#packages">Packages</a></li>
+    <h1>TimoTECH <span>Films</span></h1>
+
+  <!-- Mobile menu toggle -->
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+
+  <nav id="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#packages">Packages</a></li>
         <li><a href="#pa">PA System</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -40,11 +46,11 @@
     <!-- SLIDER -->
     <div class="slider">
       <div class="slides">
-        <img src="images/1.jpg" alt="Wedding photography">
+        <img src="images/1.jpg" alt="Wedding Shoot">
         <img src="images/2.jpg" alt="Event coverage">
-        <img src="images/3.jpg" alt="Portrait session">
-        <img src="images/4.jpg" alt="Nature shot">
-        <img src="images/5.jpg" alt="Studio shoot">
+        <img src="images/3.jpg" alt="wedding shoot">
+        <img src="images/4.jpg" alt="Wedding shoot">
+        <img src="images/5.jpg" alt="Wedding shoot">
       </div>
     </div>
 
@@ -98,12 +104,12 @@
   <!-- PA SYSTEM -->
   <section id="pa">
     <h2>PA System for Hire</h2>
-    <p style="background-color: tomato;">Crystal Clear Sound for Every Occasion</p>
+    <p style="background-color: tomato;">Crystal Clear Sound for Every Occasion</p><br>
     <p>Professional audio system for weddings, parties, and corporate events.</p>
     <p><b>High-quality speakers, microphones, and mixing equipment available.</b>
-    <br>✔3 Midrange Speakers– Deliver crisp vocals and speech clarity <br>✔1 Bass Speaker – Adds deep, rich low-end for music and ambience<br>✔Wireless Microphones<br>✔Ideal for weddings, parties, church events, and corporate functions<br>✔1 16 Channel Mixer<br>✔1 Power Amplifier
-</p>
-    <h4>Starting at Ksh 5,000 per day</h4>
+    <br><br>✔3 Midrange Speakers– Deliver crisp vocals and speech clarity <br><br>✔1 Bass Speaker – Adds deep, rich low-end for music and ambience<br><br>✔Wireless Microphones<br><br>✔Ideal for weddings, parties, church events, and corporate functions<br><br>✔1 16 Channel Mixer<br><br>✔1 Power Amplifier<br><br>✔Cables and Stands Included<br><br>✔Professional Setup and Support.<br><br><div style="color: blue;">✔ WE OFFER DJING SERVICES AT AN EXTRA AFFORDABLE COST</div>
+</p><br><br>
+    <h4>BOOK TIMOSOUND TODAY FOR AN UNFORGETTABLE EXPERIENCE </h4>
     <a href="https://wa.me/254708021198?text=Hi%20Timothy,%20I'm%20interested%20in%20hiring%20the%20PA%20System" target="_blank" class="btn">Hire Now</a>
   </section>
 
@@ -118,6 +124,14 @@
   <footer>
     <p>© 2025 TimoTECH Films | Designed by MutsTECH</p>
   </footer>
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.querySelector('nav ul');
 
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    toggle.classList.toggle('active'); // 🔹 add this line
+  });
+</script>
 </body>
 </html>
