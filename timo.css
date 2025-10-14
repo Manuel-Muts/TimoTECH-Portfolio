@@ -71,9 +71,6 @@ nav a:hover {
   nav ul {
     flex-direction: column;
     background: #000;
-    position: absolute;
-    top: 60px;
-    right: 0;
     width: 100%;
     text-align: center;
     overflow: hidden;
@@ -83,8 +80,9 @@ nav a:hover {
   }
 
   nav ul.active {
-    max-height: 300px; /* show menu smoothly */
-    padding: 20px 0;
+   max-height: 300px; /* expands smoothly */
+        padding: 10px 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   }
 
   nav ul li {
