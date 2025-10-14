@@ -69,22 +69,18 @@ nav a:hover {
   }
 
   nav ul {
-  flex-direction: column;
-  background: #000;
-  width: 100%;
-  text-align: center;
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.4s ease-in-out;
-  padding: 0;
-  position: relative; /* not absolute */
-}
-
-nav ul.active {
-  max-height: 400px;
-  padding: 20px 0;
-}
-
+    flex-direction: column;
+    background: #000;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    max-height: 0; /* hidden by default */
+    transition: max-height 0.4s ease-in-out;
+    padding: 0;
+  }
 
   nav ul.active {
     max-height: 300px; /* show menu smoothly */
