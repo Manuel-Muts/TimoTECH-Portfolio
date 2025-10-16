@@ -15,7 +15,7 @@
       border-radius: 15px;
       width: 80%;
        margin: 20px auto;
-       height: 90px;
+       height: 100px auto;
     }
 
     header h1 {
