@@ -12,6 +12,10 @@
       background: linear-gradient(90deg, #ff6a00, #ee0979);
       text-align: center;
       padding: 40px 20px;
+      border-radius: 15px;
+      width: 80%;
+       margin: 20px auto;
+       height: 90px;
     }
 
     header h1 {
