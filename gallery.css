@@ -37,11 +37,15 @@
 }
 
 .gallery img {
-  width: 100%;
+  width: 70%;
   border-radius: 5px;
   transition: transform 0.3s;
+  margin: 5px auto;
 }
-
+ img#five {
+  height: 70%;
+  width:70%
+}
 .gallery img:hover {
   transform: scale(1.05);
 }
