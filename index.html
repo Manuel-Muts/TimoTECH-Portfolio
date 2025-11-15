@@ -21,30 +21,41 @@
   <link rel="icon" type="image/jpg" href="images/favicon.jpg">   
   <link rel="stylesheet" href="timo.css">
   <script src="timo.js" defer></script>
+  <script type="module" src="firebase.js"></script>
 </head>
 <body>
 
   <!-- HEADER -->
-  <header>
+    <header>
+  <div class="header-left">
     <h1>TimoTECH <span>Films</span></h1>
 
-  <!-- Mobile menu toggle -->
-  <div class="menu-toggle" id="menu-toggle">
-    ☰
+    <!-- 👇 Account dropdown moved next to logo -->
+    <div class="dropdown account-menu">
+      <a href="#">Account ▾</a>
+      <ul class="dropdown-content">
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+        <li><a href="reset.html">Reset Password</a></li>
+      </ul>
+    </div>
   </div>
 
+  <!-- Mobile menu toggle -->
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+
+  <!-- Navigation links -->
   <nav id="navbar">
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="about.html" target="_blank">About</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#packages">Packages</a></li>
-        <li><a href="#pa">PA System</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
+      <li><a href="#pa">PA System</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
   <!-- HOME -->
   <section id="home" class="hero">
     <div class="hero-content">
@@ -136,8 +147,8 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2025 TimoTECH Films(All rights reserved)&#128520; | <small><i>Designed by MutsTECH</i></small> </p>
-  </footer>
+    <p>&copy; Muts Tech <script>document.write(new Date().getFullYear());</script>. All rights reserved.&#128520; </p>
+   </footer>
 <script>
   const toggle = document.getElementById('menu-toggle');
   const nav = document.querySelector('nav ul');
@@ -146,6 +157,8 @@
     nav.classList.toggle('active');
     toggle.classList.toggle('active'); // 🔹 add this line
   });
+</script>
+
 </script>
 </body>
 </html>

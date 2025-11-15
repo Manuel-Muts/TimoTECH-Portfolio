@@ -1,0 +1,81 @@
+form {
+  background-color: lightblue;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  margin: 10px auto;
+  border-left: 4px solid tomato;
+  box-shadow: 3px 3px 8px tomato;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 90%;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button,
+input[type="submit"] {
+  background: #000;          /* Button color */
+  color: #fff;               /* Text color */
+  border: none;              /* Remove border */
+  padding: 10px 20px;        /* Space inside button */
+  font-size: 16px;           /* Text size */
+  font-weight: 500;
+  border-radius: 6px;        /* Rounded corners */
+  cursor: pointer;           /* Pointer cursor on hover */
+  transition: background 0.3s ease;
+}
+
+/* Hover effect */
+button:hover,
+input[type="submit"]:hover {
+  background: #444;          /* Slightly lighter when hovered */
+}
+
+
+label {
+  font-weight: bold;
+}
+
+p {
+  text-align: center;
+  color: #555;
+}
+a {
+  color: #4caf50;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: -15px;
+  margin-bottom: 15px;
+}
+.success {
+  color: green;
+  font-size: 14px;
+  margin-top: -15px;
+  margin-bottom: 15px;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+h1 {
+  text-align: center;
+  color: #222;
+}
+

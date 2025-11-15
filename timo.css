@@ -61,6 +61,98 @@ nav a {
 nav a:hover {
   color: #ff7b00;
 }
+/* Base nav styles (you probably already have something similar) */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* ==============================
+   HEADER LAYOUT TWEAK
+============================== */
+/* Left side: logo + account */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* space between logo and account */
+}
+
+/* Account dropdown styling */
+.account-menu {
+  position: relative;
+}
+
+.account-menu > a {
+  color: #ffcc00;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.account-menu > a:hover {
+  color: #fff;
+}
+
+/* Dropdown */
+.account-menu .dropdown-content {
+  display: none;
+  position: absolute;
+  background: #111;
+  top: 100%;
+  left: 0;
+  padding: 10px;
+  list-style: none;
+  border-radius: 5px;
+}
+
+.account-menu .dropdown-content li {
+  margin: 0;
+}
+
+.account-menu .dropdown-content li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 6px 10px;
+}
+
+.account-menu .dropdown-content li a:hover {
+  background: #333;
+}
+
+/* Show dropdown on hover */
+.account-menu:hover .dropdown-content {
+  display: block;
+}
+
+/* MOBILE: move account dropdown back into flow */
+@media (max-width: 768px) {
+  .header-left {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .account-menu .dropdown-content {
+    position: static;
+    background: #111;
+    padding: 0;
+  }
+
+  .account-menu .dropdown-content li a {
+    padding: 10px;
+  }
+}
 
 /* MENU TOGGLE */
 .menu-toggle {
