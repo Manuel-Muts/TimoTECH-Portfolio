@@ -65,3 +65,26 @@ footer {
     footer a:hover{
       color: #7bc8d0;
     }
+
+    /* Owner panel (hidden by default) */
+.owner-panel {
+  display: none;
+  margin-top: 10px;
+}
+
+/* Upload button styled to blend with footer */
+.owner-upload-btn {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  color: #888;
+  border: 1px dashed #333;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.owner-upload-btn:hover {
+  color: #7bc8d0;
+  border-color: #7bc8d0;
+}
