@@ -28,12 +28,46 @@
       <img src="images/3.jpg" alt="Wedding">
       <img src="images/4.jpg" alt="Wedding">
       <img src="images/5.jpg" alt="Wedding" id="five">
+      
     </div>   
     
        <p style="font-size: 20px; font-weight: bolder;"><a href="index.html">← Back to Home</a></p>
     <footer>
     <p>&copy; Muts Tech <script>document.write(new Date().getFullYear());</script>. All rights reserved.&#128520; </p>
+    <!-- Owner-only upload panel (hidden) -->
+<div id="ownerPanel" class="owner-panel">
+  <label class="owner-upload-btn">
+    + Add Photos
+    <input type="file" id="imageUpload" accept="image/*" multiple hidden>
+  </label>
+</div>
+
    </footer>
-    
+<script>
+const ownerPanel = document.getElementById("ownerPanel");
+const gallery = document.querySelector(".gallery");
+
+// SECRET KEY: Ctrl + Shift + G
+document.addEventListener("keydown", function (e) {
+  if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "g") {
+    ownerPanel.style.display =
+      ownerPanel.style.display === "block" ? "none" : "block";
+  }
+});
+
+document.getElementById("imageUpload").addEventListener("change", function () {
+  [...this.files].forEach(file => {
+    const reader = new FileReader();
+    reader.onload = e => {
+      const img = document.createElement("img");
+      img.src = e.target.result;
+      img.alt = "Gallery image";
+      gallery.appendChild(img);
+    };
+    reader.readAsDataURL(file);
+  });
+});
+</script>
+   
 </body>
 </html>
