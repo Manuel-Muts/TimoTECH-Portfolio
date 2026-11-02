@@ -1,0 +1,17 @@
+{
+  "rules": {
+    "form_submissions": {
+      "$submissionId": {
+        ".read": false,
+        ".write": "!data.exists() && newData.exists()",
+        ".validate": "newData.hasChild('timestamp')",
+        "timestamp": {
+          ".validate": "newData.isNumber()"
+        },
+        "$other": {
+          ".validate": "newData.isString()"
+        }
+      }
+    }
+  }
+}

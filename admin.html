@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Gallery Admin | TimoTECH Films</title>
+  <link rel="icon" type="image/jpeg" href="BRAND%20ICON/BRAND%20ICON.jpeg">
+  <link rel="stylesheet" href="admin.css">
+  <script type="module" src="admin.js"></script>
+</head>
+<body>
+  <header class="admin-header">
+    <a class="admin-brand" href="index.html" aria-label="TimoTECH Films home">
+      <img src="BRAND%20ICON/BRAND%20ICON.jpeg" alt="TimoTECH Films">
+    </a>
+    <a class="admin-back-link" href="gallery.html">View public gallery ↗</a>
+  </header>
+
+  <main class="admin-shell">
+    <p id="admin-status" class="admin-status" role="status" aria-live="polite"></p>
+
+    <section id="login-panel" class="admin-panel">
+      <img class="login-brand-icon" src="BRAND%20ICON/BRAND%20ICON.jpeg" alt="TimoTECH Films">
+      <h1 class="login-title">Welcome back</h1>
+      <p>Use the verified admin account to manage gallery uploads.</p>
+      <form id="admin-login-form" class="admin-form">
+        <label for="admin-email">Email address</label>
+        <input id="admin-email" name="email" type="email" autocomplete="username" required>
+        <label for="admin-password">Password</label>
+        <div class="password-field">
+          <input id="admin-password" name="password" type="password" autocomplete="current-password" required>
+          <button id="toggle-password" class="password-toggle" type="button" aria-label="Show password" aria-pressed="false" aria-controls="admin-password">Show</button>
+        </div>
+        <button class="admin-button" type="submit">Sign in</button>
+      </form>
+      <a class="admin-secondary-link login-reset-link" href="reset.html">Forgot password?</a>
+    </section>
+
+    <section id="verification-panel" class="admin-panel" hidden>
+      <h2>Verify your email</h2>
+      <p>Gallery publishing is enabled only for the verified admin account. Verify your email, then check again here.</p>
+      <div class="admin-actions">
+        <button id="send-verification" class="admin-button" type="button">Send verification email</button>
+        <button id="check-verification" class="admin-button admin-button-secondary" type="button">I’ve verified — check again</button>
+        <button class="admin-signout admin-logout" type="button">Sign out</button>
+      </div>
+    </section>
+
+    <section id="dashboard-panel" hidden>
+      <div class="admin-dashboard-heading">
+        <div>
+          <p class="admin-eyebrow">Photo management</p>
+          <h2>Publish to the gallery</h2>
+        </div>
+        <button class="admin-signout admin-logout" type="button">Sign out</button>
+      </div>
+
+      <form id="upload-form" class="admin-panel upload-panel">
+        <label class="upload-dropzone" for="gallery-files">
+          <span class="upload-mark" aria-hidden="true">＋</span>
+          <span class="upload-title">Choose photos to upload</span>
+          <span class="upload-help">JPEG, PNG, WebP, or GIF · up to 10 MB per photo · up to 10 at once</span>
+          <input id="gallery-files" name="photos" type="file" accept="image/jpeg,image/png,image/webp,image/gif" multiple required>
+        </label>
+
+        <ul id="file-preview" class="file-preview" aria-live="polite"></ul>
+
+        <label for="photo-caption">Caption <span>(optional; applies to all selected photos)</span></label>
+        <input id="photo-caption" name="caption" type="text" maxlength="160" placeholder="A short description of these photos">
+
+        <div class="upload-actions">
+          <button id="upload-button" class="admin-button" type="submit" disabled>Publish photos</button>
+          <progress id="upload-progress" max="100" value="0" hidden></progress>
+          <span id="upload-progress-label" class="upload-progress-label"></span>
+        </div>
+      </form>
+
+      <section class="admin-panel published-panel" aria-labelledby="published-title">
+        <h2 id="published-title">Published photos</h2>
+        <div id="admin-gallery" class="admin-gallery"></div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

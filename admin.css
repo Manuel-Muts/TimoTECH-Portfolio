@@ -1,0 +1,519 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(145deg, #eef5f7, #dce8ed);
+  color: #142b40;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.admin-header {
+  display: flex;
+  min-height: 68px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px clamp(16px, 5vw, 64px);
+  background: linear-gradient(110deg, #101b35, #174c61);
+  box-shadow: 0 4px 16px rgba(8, 18, 38, 0.2);
+}
+
+.admin-brand img {
+  display: block;
+  width: 140px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.admin-back-link,
+.admin-secondary-link {
+  color: #d7f4f3;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.admin-back-link:hover,
+.admin-secondary-link:hover {
+  color: #83e1df;
+}
+
+.admin-shell {
+  width: min(100% - 32px, 960px);
+  margin: 0 auto;
+  padding: 20px 0 56px;
+}
+
+body.admin-dashboard-mode .admin-shell {
+  width: 100%;
+  max-width: none;
+  padding: 24px clamp(12px, 2vw, 32px) 48px;
+}
+
+.admin-heading {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.admin-eyebrow {
+  margin: 0 0 8px;
+  color: #167c89;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.admin-heading h1 {
+  margin: 0 0 10px;
+  font-size: clamp(2.2rem, 6vw, 3.2rem);
+}
+
+.admin-heading > p:last-child,
+.admin-panel > p {
+  color: #5b6d78;
+  line-height: 1.6;
+}
+
+.admin-status {
+  min-height: 24px;
+  margin: 0 0 14px;
+  color: #126873;
+  text-align: center;
+}
+
+.admin-status[data-state="error"] {
+  color: #a42a3c;
+}
+
+.admin-panel {
+  margin-bottom: 22px;
+  padding: clamp(20px, 4vw, 32px);
+  border: 1px solid #dce7eb;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 10px 28px rgba(20, 43, 64, 0.08);
+}
+
+#login-panel {
+  width: min(100%, 360px);
+  margin: 0 auto 22px;
+  padding: 20px 24px;
+  border-radius: 14px;
+  box-shadow: 0 14px 36px rgba(20, 43, 64, 0.12);
+}
+
+.login-brand-icon {
+  display: block;
+  width: 138px;
+  height: 48px;
+  margin: 0 auto 10px;
+  object-fit: contain;
+}
+
+.login-title {
+  margin: 0 0 5px;
+  color: #142b40;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+#login-panel > p {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.admin-panel h2,
+.admin-dashboard-heading h2 {
+  margin: 0 0 10px;
+  color: #142b40;
+}
+
+.admin-form {
+  display: grid;
+  gap: 6px;
+  margin: 14px 0 10px;
+}
+
+.admin-form label,
+.upload-panel > label:not(.upload-dropzone) {
+  color: #314957;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.admin-form input,
+.upload-panel > input {
+  width: 100%;
+  min-height: 46px;
+  margin-bottom: 8px;
+  padding: 10px 12px;
+  border: 1px solid #cbd9de;
+  border-radius: 9px;
+  background: #fbfdfe;
+  color: #142b40;
+  font: inherit;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  margin: 0;
+  padding-right: 68px;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  padding: 6px 8px;
+  transform: translateY(-50%);
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #167c89;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.password-toggle:hover {
+  background: #eaf5f5;
+}
+
+.password-toggle:focus-visible {
+  outline: 2px solid #167c89;
+  outline-offset: 2px;
+}
+
+.admin-form input:focus,
+.upload-panel > input:focus {
+  border-color: #167c89;
+  outline: 3px solid rgba(22, 124, 137, 0.15);
+}
+
+.admin-button {
+  min-height: 38px;
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 10px;
+  background: #167c89;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.admin-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #105e6a;
+}
+
+.admin-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.admin-secondary-link {
+  color: #167c89;
+}
+
+.login-reset-link {
+  display: block;
+  font-size: 0.82rem;
+  text-align: center;
+}
+
+.admin-actions,
+.upload-actions,
+.admin-dashboard-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.admin-button-secondary {
+  border: 1px solid #cbd9de;
+  background: #fff;
+  color: #174c61;
+}
+
+.admin-button-secondary:hover:not(:disabled) {
+  background: #eef5f7;
+}
+
+.admin-signout {
+  padding: 9px 14px;
+  border: 1px solid #cbd9de;
+  border-radius: 9px;
+  background: #fff;
+  color: #314957;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+}
+
+.admin-signout:hover {
+  border-color: #167c89;
+  color: #105e6a;
+}
+
+.admin-dashboard-heading {
+  margin: 10px 0 18px;
+}
+
+.admin-dashboard-heading h2 {
+  margin-bottom: 0;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.upload-dropzone {
+  display: grid;
+  min-height: 190px;
+  place-content: center;
+  justify-items: center;
+  gap: 8px;
+  padding: 24px;
+  border: 2px dashed #9abdc4;
+  border-radius: 14px;
+  background: #f4fafb;
+  cursor: pointer;
+  text-align: center;
+}
+
+.upload-dropzone:hover,
+.upload-dropzone:focus-within {
+  border-color: #167c89;
+  background: #edf8f8;
+}
+
+.upload-dropzone input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.upload-mark {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 50%;
+  background: #d9f4f0;
+  color: #126873;
+  font-size: 1.7rem;
+}
+
+.upload-title {
+  color: #142b40;
+  font-weight: 700;
+}
+
+.upload-help,
+.upload-panel label span {
+  color: #687b84;
+  font-size: 0.82rem;
+  font-weight: 400;
+}
+
+.file-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+  gap: 10px;
+  margin: 16px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.file-preview:empty {
+  display: none;
+}
+
+.file-preview li {
+  overflow: hidden;
+  border: 1px solid #dce7eb;
+  border-radius: 9px;
+  background: #f8fbfc;
+  color: #52636d;
+  font-size: 0.78rem;
+}
+
+.file-preview img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.file-preview span {
+  display: block;
+  overflow: hidden;
+  padding: 6px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.upload-panel > label:not(.upload-dropzone) {
+  display: block;
+  margin: 18px 0 8px;
+}
+
+.upload-actions {
+  justify-content: flex-start;
+  margin-top: 12px;
+}
+
+.upload-actions progress {
+  width: min(100%, 240px);
+  height: 12px;
+  accent-color: #167c89;
+}
+
+.upload-progress-label {
+  color: #52636d;
+  font-size: 0.88rem;
+}
+
+.admin-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 14px;
+}
+
+.admin-gallery:empty::after {
+  color: #687b84;
+  content: "No photos have been published yet.";
+  grid-column: 1 / -1;
+}
+
+.admin-date-group {
+  display: grid;
+  gap: 8px;
+}
+
+.admin-date-heading {
+  margin: 0;
+  color: #314957;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.admin-date-photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(88px, 96px));
+  align-items: start;
+  gap: 8px;
+}
+
+.admin-gallery figure {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #dce7eb;
+  border-radius: 6px;
+  background: #f8fbfc;
+}
+
+.admin-photo-delete {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  display: grid;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 50%;
+  background: rgba(130, 28, 43, 0.9);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 17px;
+  line-height: 1;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);
+}
+
+.admin-photo-delete:hover:not(:disabled) {
+  background: #a51f35;
+}
+
+.admin-photo-delete:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.admin-photo-delete:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.admin-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.admin-gallery figcaption {
+  padding: 3px 4px;
+  color: #52636d;
+  font-size: 0.5rem;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 520px) {
+  .admin-header {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .admin-brand img {
+    width: 118px;
+  }
+
+  .admin-back-link {
+    font-size: 0.8rem;
+  }
+
+  .admin-shell {
+    padding-top: 20px;
+  }
+
+  #login-panel {
+    padding: 22px 20px;
+  }
+
+  .admin-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .admin-actions button {
+    width: 100%;
+  }
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Gallery</title>
-    <link rel="icon" type="image/jpg" href="images/favicon.jpg" />
+    <link rel="icon" type="image/jpeg" href="BRAND%20ICON/BRAND%20ICON.jpeg" />
     <link rel="stylesheet" href="gallery.css"/>
     <title>Gallery | TimoTECH Films Photography & Videography Portfolio</title>
      <meta property="og:title" content="TimoTECH Films | Photography & Videography">
@@ -19,55 +19,22 @@
 </head>
 <body>
     <header>
-    <h1>Main Photo Gallery</h1><br>
-    <p style="font-size: 20px; font-weight: bolder;"><a href="index.html">← Back to Home</a></p>
+    <h1>Main Photo Gallery</h1>
+    <p class="header-back-link"><a href="index.html">← Back to Home</a></p>
   </header>
-<div class="gallery">
+<div class="gallery" id="gallery">
       <img src="images/1.jpg" alt="Wedding">
       <img src="images/2.jpg" alt="Wedding">
       <img src="images/3.jpg" alt="Wedding">
       <img src="images/4.jpg" alt="Wedding">
-      <img src="images/5.jpg" alt="Wedding" id="five">
-      
-    </div>   
+      <img src="images/5.jpg" alt="Wedding">
+    </div>
     
-       <p style="font-size: 20px; font-weight: bolder;"><a href="index.html">← Back to Home</a></p>
+       <p class="gallery-home-link"><a href="index.html">← Back to Home</a></p>
     <footer>
-    <p>&copy; Muts Tech <script>document.write(new Date().getFullYear());</script>. All rights reserved.&#128520; </p>
-    <!-- Owner-only upload panel (hidden) -->
-<div id="ownerPanel" class="owner-panel">
-  <label class="owner-upload-btn">
-    + Add Photos
-    <input type="file" id="imageUpload" accept="image/*" multiple hidden>
-  </label>
-</div>
-
+      <p class="gallery-copyright">&copy; TimoTECH Films <script>document.write(new Date().getFullYear());</script>. All rights reserved.&#128520;</p>
+      <a class="gallery-admin-link" href="admin.html">Log in</a>
    </footer>
-<script>
-const ownerPanel = document.getElementById("ownerPanel");
-const gallery = document.querySelector(".gallery");
-
-// SECRET KEY: Ctrl + Shift + G
-document.addEventListener("keydown", function (e) {
-  if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "g") {
-    ownerPanel.style.display =
-      ownerPanel.style.display === "block" ? "none" : "block";
-  }
-});
-
-document.getElementById("imageUpload").addEventListener("change", function () {
-  [...this.files].forEach(file => {
-    const reader = new FileReader();
-    reader.onload = e => {
-      const img = document.createElement("img");
-      img.src = e.target.result;
-      img.alt = "Gallery image";
-      gallery.appendChild(img);
-    };
-    reader.readAsDataURL(file);
-  });
-});
-</script>
-   
+<script type="module" src="gallery.js"></script>
 </body>
 </html>

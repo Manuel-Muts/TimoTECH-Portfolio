@@ -7,28 +7,32 @@
 // 1️⃣ IMPORT FIREBASE SDK MODULES
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
 import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-database.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js";
 import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  sendPasswordResetEmail
+  sendPasswordResetEmail,
+  sendEmailVerification
 } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js";
 
 // 2️⃣ FIREBASE CONFIGURATION
 const firebaseConfig = {
-  apiKey: "AIzaSyD1WooB8rJKFdIccI7hVKOkgZkhp31VYj8",
-  authDomain: "timotech-films.firebaseapp.com",
-  projectId: "timotech-films",
-  databaseURL: "https://timotech-films-default-rtdb.firebaseio.com/",
-  storageBucket: "timotech-films.firebasestorage.app",
-  messagingSenderId: "563809562931",
-  appId: "1:563809562931:web:de8d5925df077eb09dce46"
+   apiKey: "AIzaSyAGITfHWQ5B0-bsMn4VSe3QlZ3ZtBEIP00",
+  authDomain: "business-management-55657.firebaseapp.com",
+  projectId: "business-management-55657",
+  storageBucket: "business-management-55657.firebasestorage.app",
+  messagingSenderId: "1092549824400",
+  appId: "1:1092549824400:web:cceba12bef33f9f07bad15",
 };
 
 // 3️⃣ INITIALIZE FIREBASE
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
+const firestore = getFirestore(app);
 const auth = getAuth(app);
+
+export { app, auth, db, firestore };
 
 // 4️⃣ DOM READY EVENT
 document.addEventListener("DOMContentLoaded", () => {
@@ -66,10 +70,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const password = signupForm.password.value;
 
       createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          alert("✅ Account created successfully!");
-          console.log("User:", userCredential.user);
+        .then(async (userCredential) => {
           signupForm.reset();
+          try {
+            await sendEmailVerification(userCredential.user);
+            alert("Account created. Check your email and verify it before using the admin uploader.");
+          } catch (error) {
+            alert(`Account created, but the verification email could not be sent: ${error.message}`);
+          }
         })
         .catch((error) => {
           alert("❌ " + error.message);

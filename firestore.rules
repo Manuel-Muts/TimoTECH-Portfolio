@@ -1,0 +1,32 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isVerifiedAdmin() {
+      return request.auth != null
+        && request.auth.token.email == 'timotech254@gmail.com'
+        && request.auth.token.email_verified == true;
+    }
+
+    match /gallery/{photoId} {
+      allow read: if true;
+      allow create: if isVerifiedAdmin()
+        && request.resource.data.keys().hasOnly([
+          'imageUrl',
+          'publicId',
+          'caption',
+          'createdAt',
+          'uploadedBy'
+        ])
+        && request.resource.data.imageUrl is string
+        && request.resource.data.imageUrl.matches('^https://res\\.cloudinary\\.com/ynpxvgxs/image/upload/.*$')
+        && request.resource.data.publicId is string
+        && request.resource.data.publicId.size() <= 512
+        && request.resource.data.caption is string
+        && request.resource.data.caption.size() <= 160
+        && request.resource.data.createdAt == request.time
+        && request.resource.data.uploadedBy == request.auth.uid;
+      allow update: if false;
+      allow delete: if isVerifiedAdmin();
+    }
+  }
+}

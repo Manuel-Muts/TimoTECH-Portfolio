@@ -18,7 +18,7 @@
   <meta name="twitter:image" content="https://timotechfilms.netlify.app/images/favicon.jpg">
   <title>TimoTECH Films | Photography & Videography</title>
   <meta name="author" content="TimoTECH Films">
-  <link rel="icon" type="image/jpg" href="images/favicon.jpg">   
+  <link rel="icon" type="image/jpeg" href="BRAND%20ICON/BRAND%20ICON.jpeg">
   <link rel="stylesheet" href="timo.css">
   <script src="timo.js" defer></script>
   <script type="module" src="firebase.js"></script>
@@ -26,36 +26,24 @@
 <body>
 
   <!-- HEADER -->
-    <header>
-  <div class="header-left">
-    <h1>TimoTECH <span>Films</span></h1>
-
-    <!-- 👇 Account dropdown moved next to logo -->
-    <div class="dropdown account-menu">
-      <a href="#">Account ▾</a>
-      <ul class="dropdown-content">
-        <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html">Sign Up</a></li>
-        <li><a href="reset.html">Reset Password</a></li>
-      </ul>
+  <header>
+    <div class="header-left">
+      <img class="brand-logo" src="BRAND%20ICON/BRAND%20ICON.jpeg" alt="TimoTECH Films">
     </div>
-  </div>
 
-  <!-- Mobile menu toggle -->
-  <div class="menu-toggle" id="menu-toggle">☰</div>
-
-  <!-- Navigation links -->
-  <nav id="navbar">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="about.html" target="_blank">About</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#packages">Packages</a></li>
-      <li><a href="#pa">PA System</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+    <!-- Navigation links -->
+    <nav id="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="about.html" target="_blank">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#pa">PA System</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navbar"></button>
+  </header>
   <!-- HOME -->
   <section id="home" class="hero">
     <div class="hero-content">
@@ -88,77 +76,184 @@
 
   <!-- PACKAGES -->
   <section id="packages">
-    <h2>Packages & Pricing</h2>
+    <p class="packages-eyebrow">Photography &amp; videography</p>
+    <h2>Choose the package that fits your day</h2>
+    <p class="packages-intro">Thoughtfully planned coverage and keepsakes for your special moments.</p>
     <div class="package-container">
       <div class="package-card">
-        <h3>Basic Photography</h3>
-        <p>✔ 2 HD video cameras<br>✔ 16GB flash drive with edited content
-<br>✔ A4 size photo album <br>✔ Digital photo link for easy access
-</p>
-        <h4>Ksh 25,000</h4>
-        <a href="https://wa.me/254708021198?text=Hi%20Timothy,%20I'm%20interested%20in%20the%20Basic%20Photography%20package" target="_blank" class="btn">Book on WhatsApp</a>
+        <h3>Basic Package</h3>
+        <ul class="package-features">
+          <li>2 HD video cameras</li>
+          <li>16GB flash drive with edited content</li>
+          <li>A4 size photo album</li>
+          <li>Digital photo link for easy access</li>
+        </ul>
+        <p class="package-price">Ksh 25,000</p>
+        <a href="https://wa.me/254708021198?text=Hi%20Timothy,%20I'm%20interested%20in%20the%20Basic%20Photography%20package" target="_blank" rel="noopener noreferrer" class="btn">Book on WhatsApp</a>
       </div>
 
       <div class="package-card">
-        <h3>Standard Photography</h3>
-        <p>✔ 2 HD video cameras<br>✔ 1 photo camera with speedlight<br>✔ 16GB Flash Drive Included <br>✔ A3 size photo book
-<br>✔ A4 size photomount<br>✔ Digital photo link for easy access</p>
-        <h4>Ksh 40,000</h4>
-        <a href="https://wa.me/254708021198?text=Hi%20Timothy,%20I'm%20interested%20in%20the%20Standard%20Photography%20package" target="_blank" class="btn">Book on WhatsApp</a>
+        <p class="package-tag">Most common</p>
+        <h3>Standard Package</h3>
+        <ul class="package-features">
+          <li>2 HD video cameras</li>
+          <li>1 photo camera with speedlight</li>
+          <li>16GB flash drive</li>
+          <li>A3 size photo book</li>
+          <li>A4 size photomount</li>
+          <li>Digital photo link for easy access</li>
+        </ul>
+        <p class="package-price">Ksh 40,000</p>
+        <a href="https://wa.me/254708021198?text=Hi%20Timothy,%20I'm%20interested%20in%20the%20Standard%20Photography%20package" target="_blank" rel="noopener noreferrer" class="btn">Book on WhatsApp</a>
       </div>
 
       <div class="package-card">
-        <h3>Star photography</h3>
-        <p>✔ 2 HD video cameras<br>✔ 2 photo camera with speedlight<br>✔ 16GB flash drive<br>✔ A4 size photo album<br>✔ A3 size photomount<br>✔ Digital photo link for easy access<br>✔ Drone footage</p>
-        <h4>Ksh 55,000</h4>
-        <a href="https://wa.me/254708021198?text=Hi%20Timothy,%20I'm%20interested%20in%20the%20Star%20Photography%20package" target="_blank" class="btn">Book on WhatsApp</a>
+        <h3>Star Package</h3>
+        <ul class="package-features">
+          <li>2 HD video cameras</li>
+          <li>2 photo cameras with speedlight</li>
+          <li>16GB flash drive</li>
+          <li>A4 size photo album</li>
+          <li>A3 size photomount</li>
+          <li>Digital photo link for easy access</li>
+          <li>Drone footage</li>
+        </ul>
+        <p class="package-price">Ksh 55,000</p>
+        <a href="https://wa.me/254708021198?text=Hi%20Timothy,%20I'm%20interested%20in%20the%20Star%20Photography%20package" target="_blank" rel="noopener noreferrer" class="btn">Book on WhatsApp</a>
       </div>
-      <div class="package-card">
-        <h3>Premium photography</h3>
-        <p>✔ 2 HD video cameras<br>✔ 2 photo camera with speedlight<br>✔ 16GB flash drive<br>✔ A4 size photo album<br>✔ A3 size photomount<br>✔ Digital photo link for easy access<br>✔ Drone footage and cinematic aerial shots
-        <br>✔ Highlight film (3–5 minutes)<br>✔Full wedding documentary (up to 2 hours)<br>✔Creative direction and lighting setup
-        <br>✔Optional pre-wedding shoot (bonus)</p>
-        <h4>Ksh 70,000</h4>
-        <a href="https://wa.me/254708021198?text=Hi%20Timothy,%20I'm%20interested%20in%20the%20Premium%20Photography%20package" target="_blank" class="btn">Book on WhatsApp</a>
+      <div class="package-card package-featured">
+        <p class="package-tag">Most complete</p>
+        <h3>Premium Package</h3>
+        <ul class="package-features">
+          <li>2 HD video cameras</li>
+          <li>2 photo cameras with speedlight</li>
+          <li>16GB flash drive</li>
+          <li>A4 size photo album and A3 photomount</li>
+          <li>Digital photo link for easy access</li>
+          <li>Drone footage and cinematic aerial shots</li>
+          <li>Highlight film (3–5 minutes)</li>
+          <li>Full wedding documentary (up to 2 hours)</li>
+          <li>Creative direction and lighting setup</li>
+          <li>Optional pre-wedding shoot (bonus)</li>
+        </ul>
+        <p class="package-price">Ksh 70,000</p>
+        <a href="https://wa.me/254708021198?text=Hi%20Timothy,%20I'm%20interested%20in%20the%20Premium%20Photography%20package" target="_blank" rel="noopener noreferrer" class="btn">Book on WhatsApp</a>
       </div>
     </div>
   </section>
 
-    <h1 style="text-align: center;" id="other">Other services offered by TimoTECH Films</h1>
-  <!-- PA SYSTEM -->
-  <section id="pa">
-    <h2>PA System for Hire</h2>
-    <p class="c">Crystal Clear TIMO Sound for Every Occasion</p><br>
-    <p class="c">Professional audio system for weddings, parties, and corporate events<br>
-    High-quality speakers, microphones, and mixing equipment available.</b><br><br>
-   <p></p> <br><br>✔3 Midrange Speakers– Deliver crisp vocals and speech clarity <br><br>✔1 Bass Speaker – Adds deep, rich low-end for music and ambience<br><br>✔Wireless Microphones<br><br>✔Ideal for weddings, parties, church events, and corporate functions
-    <br><br>✔1 16 Channel Mixer<br><br>✔1 Power Amplifier<br><br>✔Cables and Stands Included<br><br>✔Professional Setup and Support.<br><br><div style="color: black; font-size: large; font-weight: bolder; font-family: monospace;">✔ WE OFFER DJ SERVICES AT AN EXTRA AFFORDABLE COST</div>
-    </p><br><br>
-    <h4><div style="font-size: x-large; font-weight: bolder; font-family: monospace;" ></div>BOOK TIMOSOUND TODAY FOR AN UNFORGETTABLE EXPERIENCE </h4>
-    <a href="https://wa.me/254708021198?text=Hi%20Timothy,%20I'm%20interested%20in%20hiring%20the%20PA%20System" target="_blank" id="book" class="btn">Hire Now</a>
+  <section class="brand-flyer" aria-labelledby="flyer-title">
+    <div class="brand-flyer-heading">
+      <p class="packages-eyebrow">More than a photo package</p>
+      <h2 id="flyer-title">Capture, create, entertain</h2>
+      <p>Discover the photography, video, and sound services we bring to your events.</p>
+    </div>
+    <a class="brand-flyer-link" href="images/BRAND%20FLYAER.jpeg" target="_blank" rel="noopener noreferrer" aria-label="Open the TimoTECH Films and TimoSound services flyer">
+      <img src="images/BRAND%20FLYAER.jpeg" alt="TimoTECH Films and TimoSound flyer featuring photography, videography, drone, editing, PA systems, live sound, and event coverage services">
+      <span>View full flyer ↗</span>
+    </a>
+  </section>
+
+  <section class="other-services" aria-labelledby="other">
+    <h2 id="other">Other services offered by TimoTECH Films</h2>
+    <section id="pa" aria-labelledby="pa-title">
+      <div class="pa-copy">
+        <p class="pa-eyebrow">TimoSound · PA System Hire</p>
+        <img class="pa-brand" src="images/PA%20SYTEM/PA%20BRAND.jpeg" alt="Timo Sound brand logo">
+        <h3 id="pa-title">Crystal-clear sound for every occasion</h3>
+        <p class="pa-description">Bring your wedding, party, church event, or corporate function to life with professional sound equipment and on-site support.</p>
+        <ul class="pa-features">
+          <li>3 midrange speakers for crisp vocals and speech</li>
+          <li>1 bass speaker for rich, powerful low-end</li>
+          <li>Wireless microphones and a 16-channel mixer</li>
+          <li>Power amplifier, cables, and stands included</li>
+          <li>Professional setup and support</li>
+        </ul>
+        <p class="pa-dj-note">DJ services are also available at an affordable extra cost.</p>
+        <a href="https://wa.me/254708021198?text=Hi%20Timothy,%20I'm%20interested%20in%20hiring%20the%20PA%20System" target="_blank" rel="noopener noreferrer" id="book" class="btn">Book TimoSound</a>
+      </div>
+      <img class="pa-image" src="images/pa.jpeg" alt="TimoTECH PA sound system set up for an event">
+    </section>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact">
-    <h2>Get in Touch</h2><br>
-    <p>📞 Call / WhatsApp: <a href="https://wa.me/254708021198" target="_blank">+254708021198</a></p><br>
-    <p>📧 Email: <a href="mailto:timotechfilm@hotmail.com">timotechfilm@hotmail.com</a></p>
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="contact-intro">
+      <p class="contact-eyebrow">Let’s create something memorable</p>
+      <h2 id="contact-title">Let’s talk about your next event.</h2>
+      <p>Have a wedding, event, or creative project coming up? Get in touch to discuss how TimoTECH Films can help capture it.</p>
+    </div>
+    <div class="contact-options">
+      <a class="contact-option" href="https://wa.me/254708021198" target="_blank" rel="noopener noreferrer">
+        <span class="contact-icon" aria-hidden="true">☎</span>
+        <span>
+          <span class="contact-label">Call or WhatsApp</span>
+          <span class="contact-value">+254 708 021 198</span>
+        </span>
+        <span class="contact-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="contact-option" href="https://wa.me/254793290051" target="_blank" rel="noopener noreferrer">
+        <span class="contact-icon" aria-hidden="true">☎</span>
+        <span>
+          <span class="contact-label">Call or WhatsApp</span>
+          <span class="contact-value">+254 793 290 051</span>
+        </span>
+        <span class="contact-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="contact-option" href="mailto:timotechfilm@hotmail.com">
+        <span class="contact-icon" aria-hidden="true">✉</span>
+        <span>
+          <span class="contact-label">Email</span>
+          <span class="contact-value">timotechfilm@hotmail.com</span>
+        </span>
+        <span class="contact-arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; Muts Tech <script>document.write(new Date().getFullYear());</script>. All rights reserved.&#128520; </p>
+    <p>&copy; TimoTECH Films <script>document.write(new Date().getFullYear());</script>. All rights reserved.&#128520; </p>
    </footer>
 <script>
   const toggle = document.getElementById('menu-toggle');
-  const nav = document.querySelector('nav ul');
+  const nav = document.getElementById('navbar');
+
+  function setMenuOpen(isOpen) {
+    nav.classList.toggle('active', isOpen);
+    toggle.classList.toggle('active', isOpen);
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+  }
 
   toggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    toggle.classList.toggle('active'); // 🔹 add this line
+    setMenuOpen(toggle.getAttribute('aria-expanded') !== 'true');
   });
-</script>
 
+  nav.addEventListener('click', event => {
+    if (event.target.closest('a')) {
+      setMenuOpen(false);
+    }
+  });
+
+  document.addEventListener('click', event => {
+    if (!event.target.closest('header')) {
+      setMenuOpen(false);
+    }
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+      setMenuOpen(false);
+      toggle.focus();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      setMenuOpen(false);
+    }
+  });
 </script>
 </body>
 </html>
