@@ -307,14 +307,6 @@ hr {
   font-weight: 700;
 }
 
-.package-price {
-  margin: auto 0 10px;
-  padding-top: 16px;
-  color: #142b40;
-  font-size: 1.65rem;
-  font-weight: 800;
-}
-
 .package-card .btn {
   align-self: flex-start;
   margin-top: 8px;
