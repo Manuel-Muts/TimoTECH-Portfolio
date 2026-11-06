@@ -68,6 +68,12 @@
   margin-top: 30px;
 }
 
+  @media (max-width: 600px) {
+    .gallery {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
   .gallery-item {
     min-width: 0;
     margin: 0;

@@ -417,8 +417,8 @@ body.admin-dashboard-mode .admin-shell {
 
 .admin-date-photos {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(88px, 96px));
-  align-items: start;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
+  align-items: stretch;
   gap: 8px;
 }
 
@@ -515,5 +515,19 @@ body.admin-dashboard-mode .admin-shell {
 
   .admin-actions button {
     width: 100%;
+  }
+
+  .admin-date-photos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .admin-gallery img {
+    aspect-ratio: 1;
+  }
+
+  .admin-gallery figcaption {
+    padding: 5px;
+    font-size: 0.68rem;
   }
 }
